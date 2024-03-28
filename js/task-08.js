@@ -6,11 +6,12 @@ function formValidation(ev) {
   const password = ev.target.elements.password.value;
   if (email === '' || password === '') {
     window.alert('Please, fill all fields in!');
+  } else {
+    const filledForm = {
+      email,
+      password,
+    };
+    console.log(filledForm);
+    ev.target.reset();
   }
-  const filledForm = {
-    email,
-    password,
-  };
-  console.log(filledForm);
-  ev.target.reset();
 }

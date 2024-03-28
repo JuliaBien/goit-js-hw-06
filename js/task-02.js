@@ -7,9 +7,11 @@ const ingredients = [
   'Condiments',
 ];
 const ingredientsList = document.querySelector('ul');
+const fragment = document.createDocumentFragment();
 for (let i = 0; i < ingredients.length; i++) {
   const listElement = document.createElement('li');
   listElement.textContent = ingredients[i];
   listElement.classList.add('item');
-  ingredientsList.append(listElement);
+  fragment.append(listElement);
 }
+ingredientsList.append(fragment);
